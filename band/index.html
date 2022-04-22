@@ -15,6 +15,7 @@
 <a href="merchandise.html"><img id="op2" src="2ndopstation.gif" width="400px" height="100px"></a>
 <a href="music.html"><img id="op3" src="3rdopstation.gif" width="400px" height="100px"></a>
 <h1>CORY<br>WONG</h1>
+<div id="myDIV"><img class="m1" src="https://static.vecteezy.com/system/resources/thumbnails/001/200/725/small/musical-note.png" width="80px"></div>
 <audio id="myAudio">
   <source src="DeanTown.mp3" type="audio/mpeg">
 </audio>
@@ -86,11 +87,23 @@ h1{
   filter: brightness(1.5);
   cursor: pointer;
 }
+#myDIV{
+  position: absolute;
+  z-index:-15;
+  animation: m11 3s infinite;
+  display:none;
+}
+@keyframes m11 {
+  from {bottom: 200px;
+  left:650px;}
+  to {bottom: 600px;
+  left:600px; opacity:0;}
+}
 </style>
 <script>
 var x = document.getElementById("myAudio");
 function playAudio() {
   x.play();
-  /*document.getElementById("myDIV").style.display = "block";*/
+  document.getElementById("myDIV").style.display = "block";
 }
 </script>
